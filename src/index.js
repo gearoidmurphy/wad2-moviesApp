@@ -21,7 +21,8 @@ const App = () => {
            <MoviesContextProvider>
              <GenresContextProvider>     {/* NEW  */}
               <Switch>
-              <Route exact path="/reviews/form" component={AddMovieReviewPage} />
+                
+                <Route exact path="/reviews/form" component={AddMovieReviewPage} />
                 <Route exact path="/movies/upcoming" component={UpcomingMoviePage} />
                 <Route path="/reviews/:id" component={MovieReviewPage} />
                 <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />

@@ -11,6 +11,7 @@ const reducer = (state, action) => {
           m.id === action.payload.movie.id ? { ...m, favorite: true } : m
         ),
         upcoming: [...state.upcoming],
+    
       };
     case "load":
       return { movies: action.payload.movies, upcoming: [...state.upcoming] };
@@ -24,6 +25,7 @@ const reducer = (state, action) => {
             : m
         ),
         upcoming: [...state.upcoming],
+ 
       };
     case "add-watchlist":
       return {
@@ -31,6 +33,7 @@ const reducer = (state, action) => {
           m.id === action.payload.movie.id ? { ...m, favorite: true } : m
         ),
         movies: [...state.movies],
+    
       };
     default:
       return state;
