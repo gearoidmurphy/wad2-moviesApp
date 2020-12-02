@@ -12,14 +12,7 @@ const SiteHeader = () => {
           TMDB Client
         </Link>
       </nav>
-      <FontAwesomeIcon
-        className="navbar-text text-light"
-        icon={["fas", "video"]}
-        size="3x"
-      />
-      <span className="navbar-text text-light">
-        For the movie enthusiast !!
-      </span>
+    
       <FontAwesomeIcon
         className="navbar-text text-light"
         icon={["fas", "film"]}
@@ -33,13 +26,37 @@ const SiteHeader = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link text-white" to="/movies/favorites">
-              Favorites
-            </Link>
-          </li>
+              <div class="dropdown">
+               <span class="button">Movies</span>
+                <div class="dropdown-content">
+                  <Link className="nav-link text-white" to="/movies/upcoming">
+                    Upcoming
+                  </Link>
+                  <Link className="nav-link text-white" to="/movies/popular">
+                    Popular Movies
+                  </Link> 
+                  <Link className="nav-link text-white" to="/movies/toprated">
+                    Top Rated
+                  </Link>
+                  <Link className="nav-link text-white" to="/movies/favorites">
+                    Favorite Movies
+                  </Link>
+                </div>
+              </div>
+          </li> 
           <li className="nav-item">
-            <Link className="nav-link text-white" to="/movies/upcoming">
-              Upcoming
+              <div class="dropdown">
+               <span class="button">People</span>
+                <div class="dropdown-content">
+                  <Link className="nav-link text-white" to="/movies/popularpeople">
+                    Popular People
+                  </Link>
+                </div>
+              </div>
+          </li> 
+          <li className="nav-item">
+            <Link className="nav-link text-white" to="/movies/search">
+              Search
             </Link>
           </li>
         </ul>

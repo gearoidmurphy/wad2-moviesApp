@@ -1,0 +1,38 @@
+import React, { useEffect, createContext, useReducer } from "react";
+import { getPeople} from "../api/tmdb-api";
+
+export const PeopleContext = createContext(null);
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "load-people":
+      return { people: action.payload.people };
+    
+    default:
+      return state;
+  }
+};
+
+const PeopleContextProvider = (props) => {
+    const [state, dispatch] = useReducer(reducer, { people: [] });
+  
+    useEffect(() => {
+      getPeople().then((people) => {
+        dispatch({ type: "load-people", payload: { people } });
+      });
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+  
+    return (
+      <PeopleContext.Provider
+        value={{
+          people: state.people,
+          
+        }}
+      >
+        {props.children}
+      </PeopleContext.Provider>
+    );
+  };
+  
+  export default PeopleContextProvider;
