@@ -91,8 +91,6 @@ Name: Gearoid Murphy 20084894
 
 ## Independent learning (If relevant).
 
-. . . . . Briefly mention each technologies/techniques used in your project codebase that were not covered in the lectures/labs. Provide source code filename references to support your assertions and include reference material links (articles/blogs).
-
 + Firebase - I used firebase to create a 3rd party athentication system 
   references:  https://console.firebase.google.com/u/0/ ,  https://blog.logrocket.com/user-authentication-firebase-react-apps/ , https://www.youtube.com/watch?v=unr4s3jd9qA
 
