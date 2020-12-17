@@ -24,7 +24,32 @@ Name: Gearoid Murphy 20084894
 ## App Design.
 ### UI Design.
 
-...... Insert screenshots of the new/modified views you have added to the Movies Fan app. Include a caption for each one clearly stating its purpose and any user interaction it supports ........
+![][welcome]
+>It welcomes the user to the page and askes them to either login or signup
+
+![][signup]
+>Asks the user to enter a email and password and it then stores it on firebase 
+
+![][login]
+>The user is asked for thier email and password and if correct they get access
+
+![][moviedropdown]
+>the home page shows popular movies and they have te the dropdown menu to choose what type of movies
+
+![][peopledropdown]
+>This shows the drop down menu of people
+
+![][upcoming]
+>Shows upcoming movies 
+
+![][popular]
+>Shows popular movies
+
+![][toprated]
+>Shows Top-Rated movies
+
+![][favorites]
+>Shows the movies the user has added to their favorites
 
 ![][movieDetail]
 >Shows detailed information on a movie. Clicking the 'Show Reviews' button will display extracts from critic reviews.
@@ -32,34 +57,60 @@ Name: Gearoid Murphy 20084894
 ![][review]
 >Shows the full text for a movie review. 
 
+![][cast]
+>Shows the full list of actors in the movie
+
+![][similar]
+>Shows a list of similar movies  
+
 ## Routing.
 
-...... Insert a list of the additional routes supported by your Movies Fan app. If relevant, specify which of the routes require authentication, i.e. protected/private.
-
 + /movies/favorites (protected) - displays the user's favorite movies selection.
-+ /reviews/:id (public) - displays the full text of a movie review.
-+ etc.
-+ etc.
++ /movies/upcoming (protected) - displays the upcoming movies selection.
++ /movies/popular (protected) - displays popular movies selection.
++ /movies/toprated (protected) - displays the toprated movies selection.
++ /movies/popularpeople (protected) - displays popular people selection.
++ /movies/watchlist (protected) - displays the user's to watch movies selection.
++ /reviews/:id (protected) - displays the full text of a movie review.
++ /login (public) - displays the login screen
++ /signup (public) - displays the signup screen
 
 ### Data hyperlinking.
 
-.... Use screenshots to illustrate where data hyperlinking is present in your views - include captions.
-
-![][cardLink]
+![][popular]
 > Clicking a card causes the display of that movie's details.
 
-![][reviewLink]
+![][similar]
+> Clicking a card causes the display of that similar movie's details.
+
+![][review]
 >Clicking the 'Full Review' for a review extract will display the full text of the review
+
+![][cast]
+>Clicking the 'view credits' for a list of actors in the movies
 
 ## Independent learning (If relevant).
 
 . . . . . Briefly mention each technologies/techniques used in your project codebase that were not covered in the lectures/labs. Provide source code filename references to support your assertions and include reference material links (articles/blogs).
 
++ Firebase - I used firebase to create a 3rd party athentication system 
+  references:  https://console.firebase.google.com/u/0/ ,  https://blog.logrocket.com/user-authentication-firebase-react-apps/ , https://www.youtube.com/watch?v=unr4s3jd9qA
+
++ semantic - I tried to use semantic but only got it to work in some places 
+
 ---------------------------------
 
-[model]: ./data.jpg
-[movieDetail]: ./public/movieDetail.png
+[cast]: ./Images/Cast.png
+[movieDetail]: ./Images/details.png
+[favorites]: ./Images/Favorites.png
+[login]: ./Images/Login.png
+[moviedropdown]: ./Images/MoviesDropDown.png
+[peopledropdown]: ./Images/PeopleDropDown.png
+[popular]: ./Images/popular.png
+[popularPeople]: ./Images/PopularPeople.png
 [review]: ./public/review.png
-[reviewLink]: ./public/reviewLink.png
-[cardLink]: ./public/cardLink.png
-[stories]: ./public/storybook.png
+[signup]: ./Images/Signup.png
+[similar]: ./Images/similarMovies.png
+[toprated]: ./Images/toprated.png
+[upcoming]: ./Images/upcoming.png
+[welcome]: ./Images/Welcome.png
