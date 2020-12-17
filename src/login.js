@@ -42,7 +42,7 @@ const Login = ({ history }) => {
         </label>
         <button type="submit">Log in</button>
       </form>
-      <p>If you dont have an account click the sign up button<Link className="nav-link " to="/signup">Sign Up</Link></p>
+      <p>If you dont have an account click the sign up button<Link className="nav-link" to="/signup">Sign Up</Link></p>
       
     </div>
   );
