@@ -11,24 +11,30 @@ import UpcomingMoviePage from "./pages/upcomingMoviesPage";
 import TopRatedMoviePage from "./pages/topRatedMoviesPage";
 import PopularMoviesPage from "./pages/popularMoviesPage";
 import MoviesContextProvider from "./contexts/moviesContext";
-import PeopleContextProvider from "./contexts/peopleContext";
 import GenresContextProvider from "./contexts/genresContext";
 import AddMovieReviewPage from './pages/addMovieReviewPage'
-import SearchResultsPage from './pages/searchResultsPage'
+// import SearchResultsPage from './pages/searchResultsPage'
 import popularPeoplePage from './pages/popularPeoplePage'
-
+// import PeopleDetailsPage from './pages/peopleDetailsPage'
+import WatchListMoviesPage from './pages/watchlistMoviesPage'
+import { AuthProvider } from "./auth";
+import welcome from "./pages/welcome";
+import signup from "./signup";
+import login from "./login";
 
 const App = () => {
   return (
       <BrowserRouter>
+      <AuthProvider>
         <div className="jumbotron">
           <SiteHeader />      {/* New Header  */}
           <div className="container-fluid">
            <MoviesContextProvider>
-             <popularPeoplePage>
               <GenresContextProvider>     {/* NEW  */}
                 <Switch>
-                <Route exact path="/movies/search" component={SearchResultsPage} />
+                  {/* <Route path="/people/:id" component={PeopleDetailsPage} /> */}
+                  {/* <Route exact path="/movies/search" component={SearchResultsPage} /> */}
+                  <Route exact path="/movies/watchlist" component={WatchListMoviesPage} />
                   <Route exact path="/movies/popularpeople" component={popularPeoplePage} />
                   <Route exact path="/movies/toprated" component={TopRatedMoviePage} />
                   <Route exact path="/movies/popular" component={PopularMoviesPage} />
@@ -37,14 +43,18 @@ const App = () => {
                   <Route path="/reviews/:id" component={MovieReviewPage} />
                   <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
                   <Route path="/movies/:id" component={MoviePage} />
-                  <Route path="/" component={HomePage} />
+                  <Route path="/home" component={HomePage} />
+                  <Route path="/login" component={login} />
+                  <Route path="/signup" component={signup} />
+                  <Route path="/" component={welcome} />
                   <Redirect from="*" to="/" />
                 </Switch>
               </GenresContextProvider>
-             </popularPeoplePage>
+
            </MoviesContextProvider> 
       </div>
     </div>
+    </AuthProvider>
   </BrowserRouter>
   );
 };

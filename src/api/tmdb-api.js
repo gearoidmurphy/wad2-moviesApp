@@ -39,7 +39,7 @@ export const getMovies = () => {
   }; 
    export const getPopularMovies = () => {
       return fetch(
-        `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
+        `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=2`
       )
         .then(res => res.json())
         .then(json => json.results);
@@ -61,13 +61,13 @@ export const getMovies = () => {
         .then(json => json.results);
     };
   
-    export const getSearch = string => {
-      return fetch(
-        ` https://api.themoviedb.org/3/search/multi?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&query=${string}&page=1&include_adult=true`
-      )
-        .then(res => res.json())
-        .then(json => json.results);
-    };
+    // export const getSearch = string => {
+    //   return fetch(
+    //     ` https://api.themoviedb.org/3/search/multi?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&query=${string}&page=1&include_adult=true`
+    //   )
+    //     .then(res => res.json())
+    //     .then(json => json.results);
+    // };
 
     export const getPeople = () => {
       return fetch(
@@ -90,5 +90,3 @@ export const getMovies = () => {
         `https://api.themoviedb.org/3/person/${id}?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US`
       ).then(res => res.json());
     };
-  
-  

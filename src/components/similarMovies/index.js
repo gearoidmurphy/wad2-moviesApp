@@ -11,7 +11,7 @@ export default ({ movie }) => {
     getsimilarMovies(movie.id).then(similars => {
       setSimilars(similars);
     });
-  }, []);
+  }, [movie.id]);
   return (
   
     <div>

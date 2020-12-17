@@ -4,14 +4,29 @@
 }
 
 .button {
-    background-color: #313131;
     color: rgb(252, 252, 252);
     text-decoration-color: #ffffff;
-    padding: 16px;
+    padding: 25px;
     font-size: 16px;
     border: none;
     cursor: pointer;
   }
+
+.signOut {
+  color: rgb(252, 252, 252);
+  background-color:rgb(59, 58, 58);
+  text-decoration-color: #ffffff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.nav-link2{
+    text-decoration-color: #ffffff;
+    padding: 25px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
 
 .dropdown {
     position: relative;
@@ -28,7 +43,7 @@
     z-index: 1;
   }
   
-  .dropdown-content a:hover {background-color: #f1f1f1}
+  .dropdown-content a:hover {background-color: #595cff}
 
   .dropdown:hover .dropdown-content {
     display: block;

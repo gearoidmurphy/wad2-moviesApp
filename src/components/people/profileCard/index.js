@@ -2,14 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./profileCard.css";
 import "../../../globals/fontawesome";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 const ProfileCard = ({person}) => {
 
   return (
     <div className="col-sm-3">
       <div className="card  bg-white">
-      <Link to={`/person/${person.id}`}>
+      <Link to={`/people/${person.id}`}>
         <img
           className="card-img-tag center "
           alt={person.name}

@@ -13,7 +13,7 @@ const PopularMoviesPage = () => {
             title="Popular Movies"
             movies={movies}  /* Changed */
             action={(popular) => {
-                return <AddToFavoritesButton movie={popular} />;
+                return <AddToFavoritesButton movie={popular} type={popular} />;
             }}
         />
     );

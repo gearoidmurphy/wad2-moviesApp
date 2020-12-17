@@ -44,10 +44,14 @@ const MoviePage = props => {
           </div>
         </div>
         <Route
-          path={`/movies/:id/reviews`}
+          path={`/homelist`}
           render={props => <MovieReviews movie={movie} {...props} />}
         />
 
+        <div className = "row">
+              <br></br>
+        </div>
+            
         <div className="row">
           <div className="col-12 ">
             {!props.history.location.pathname.endsWith("/credits") ? (

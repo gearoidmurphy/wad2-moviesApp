@@ -11,7 +11,7 @@ export default ({ movie }) => {
     getCredits(movie.id).then(credits => {
       setCredits(credits);
     });
-  }, []);
+  }, [movie.id]);
   return (
   
     <div>

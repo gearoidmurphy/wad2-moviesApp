@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {Redirect } from "react-router";
 import "../../globals/fontawesome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./siteHeader.css";
+import app from "../../base";
 
 const SiteHeader = () => {
   return (
@@ -21,14 +23,9 @@ const SiteHeader = () => {
       <nav className="navbar navbar-expand ">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <Link className="nav-link text-white" to="/">
-              Home
-            </Link>
-          </li>
-          <li className="nav-item">
-              <div class="dropdown">
+              <div class="dropdown bg-dark">
                <span class="button">Movies</span>
-                <div class="dropdown-content">
+                <div class="dropdown-content bg-dark">
                   <Link className="nav-link text-white" to="/movies/upcoming">
                     Upcoming
                   </Link>
@@ -41,13 +38,16 @@ const SiteHeader = () => {
                   <Link className="nav-link text-white" to="/movies/favorites">
                     Favorite Movies
                   </Link>
+                  <Link className="nav-link text-white" to="/movies/watchlist">
+                    WatchList Movies
+                  </Link>
                 </div>
               </div>
           </li> 
           <li className="nav-item">
-              <div class="dropdown">
+              <div class="dropdown bg-dark">
                <span class="button">People</span>
-                <div class="dropdown-content">
+                <div class="dropdown-content bg-dark">
                   <Link className="nav-link text-white" to="/movies/popularpeople">
                     Popular People
                   </Link>
@@ -55,9 +55,7 @@ const SiteHeader = () => {
               </div>
           </li> 
           <li className="nav-item">
-            <Link className="nav-link text-white" to="/movies/search">
-              Search
-            </Link>
+            <button onClick={() => <Redirect to="/welcome" /> && app.auth().signOut() } className="signOut">Sign out</button>
           </li>
         </ul>
       </nav>
