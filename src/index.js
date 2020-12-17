@@ -21,6 +21,7 @@ import { AuthProvider } from "./auth";
 import welcome from "./pages/welcome";
 import signup from "./signup";
 import login from "./login";
+import PrivateRoute from "./privateRoute";
 
 const App = () => {
   return (
@@ -34,16 +35,16 @@ const App = () => {
                 <Switch>
                   {/* <Route path="/people/:id" component={PeopleDetailsPage} /> */}
                   {/* <Route exact path="/movies/search" component={SearchResultsPage} /> */}
-                  <Route exact path="/movies/watchlist" component={WatchListMoviesPage} />
-                  <Route exact path="/movies/popularpeople" component={popularPeoplePage} />
-                  <Route exact path="/movies/toprated" component={TopRatedMoviePage} />
-                  <Route exact path="/movies/popular" component={PopularMoviesPage} />
-                  <Route exact path="/reviews/form" component={AddMovieReviewPage} />
-                  <Route exact path="/movies/upcoming" component={UpcomingMoviePage} />
-                  <Route path="/reviews/:id" component={MovieReviewPage} />
-                  <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
-                  <Route path="/movies/:id" component={MoviePage} />
-                  <Route path="/home" component={HomePage} />
+                  <PrivateRoute exact path="/movies/watchlist" component={WatchListMoviesPage} />
+                  <PrivateRoute exact path="/movies/popularpeople" component={popularPeoplePage} />
+                  <PrivateRoute exact path="/movies/toprated" component={TopRatedMoviePage} />
+                  <PrivateRoute exact path="/movies/popular" component={PopularMoviesPage} />
+                  <PrivateRoute exact path="/reviews/form" component={AddMovieReviewPage} />
+                  <PrivateRoute exact path="/movies/upcoming" component={UpcomingMoviePage} />
+                  <PrivateRoute path="/reviews/:id" component={MovieReviewPage} />
+                  <PrivateRoute exact path="/movies/favorites" component={FavoriteMoviesPage} />
+                  <PrivateRoute path="/movies/:id" component={MoviePage} />
+                  <PrivateRoute path="/home" component={HomePage} />
                   <Route path="/login" component={login} />
                   <Route path="/signup" component={signup} />
                   <Route path="/" component={welcome} />

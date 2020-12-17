@@ -11,7 +11,7 @@ const PopularPeoplePage = () => {
 
   return (
     <PageTemplate
-      title="No. Movies"
+      title="No. People"
       people={people}  /* Changed */
     />
   );
